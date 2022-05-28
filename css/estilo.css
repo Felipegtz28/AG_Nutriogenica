@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --nav_hover:               #ac51d7;
+    --morado:                  #662583;
+    --rosa_fuerte:             #e6007d;
+    --azul_marino:             #011a5a;
+    --amarillo:                #f59c00;
+    --rojo:                    #e30713;
+    --Titulocolor:             #001752;
+    --sombreadotext: 1px 1px 3px black;
+    --TituloTamaño:                 35px;
+    --Textotamaño:                  20px;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor{
+    width: 100%;
+    max-width: 1400px;
+    height: 600px;
+    overflow: hidden;
+    margin: auto;
+    padding: 100px 100px;
+}
+.titulo{
+    color: var(--Titulocolor);
+    font-weight: 700;
+    font-size: var(--TituloTamaño);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* Header */
+
+.cabecera{
+    width: 100%;
+    height: 550px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), hsla(281, 56%, 33%, 0.565)), url("../Imagenes/LOGO.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.navegador{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    background-color: var(--azul_marino);
+    justify-content: space-between;
+    z-index: 11;
+}
+.nav{
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 16px;
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 2px 15px;
+    margin: 3px 4px;
+}
+.nav:hover{
+    color: var(--nav_hover);
+
+}
+.navegadores{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nt{
+    margin-right: 3px;
+    flex-wrap: wrap;
+}
+
+.nt:hover{
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+.boton i{
+    /* margin: 5px 10px ; */
+    font-size: 50px;
+    color: #fff;
+
+    display:none;
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+.logo_inicio{
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.logo_inicio:hover{
+    transform: rotate(360deg);
+    transition: transform 0.3s;
+}
+.Titulo_inicio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+    height: 550px;
+}
+.T_I{
+    font-size: 80px;
+    color: var(--Titulocolor);
+    text-shadow: 1px 1px 1px black;
+
+}
+.T_I1{
+    font-size: 60px;
+    color: var(--Titulocolor);
+    text-shadow: 1px 1px 1px black;
+
+}
+/* .ola{
+    color: #fff;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 100px;
+} */
+
+/* Section somos */
+
+.quienes{
+    background-color: rgb(240, 240, 240);
+}
+.ilustracion > img{
+    width: 40%;
+    object-fit: cover;
+}
+.somos > img{
+    width: 48%;
+    object-fit: cover;
+    float: left;
+    padding-right: 30px;
+}
+.texto_somos{
+    display: flex;
+    font-size: 20px;
+    text-align: left;
+    height: 200px;
+    align-items: center;
+}
+
+/* Section misión */
+
+.mision > img{
+    width: 48%;
+    object-fit: cover;
+    float: right;
+    padding-left: 30px;
+}
+.texto_mision{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    font-size: 20px;
+    text-align: left;  
+}
+
+/* section productos */
+
+.producto{
+    background-color: rgb(240, 240, 240);
+}  
+.galeria_producto{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen_p>img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+.hover_p{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 3px 10px black ;
+
+}
+.Br{
+    background-color: hwb(38 0% 4% / 0.5);
+}
+.Be{
+    background-color: hsla(357, 93%, 46%, 0.5);
+}
+.An{
+    background-color: hwb(281 15% 49% / 0.5);
+}
+.hover_p p{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transition: transform .5s;
+    font-size: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    padding: 45% 0;
+}
+.galeria_producto :hover.hover_p p{
+    transform: scale(1);
+}
+
+/* Section contacto */
+
+.contacto{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px 100px 20px;
+ 
+
+}
+.redes{
+    display: flex;
+    justify-content: space-around;
+
+}
+.red_s a i{
+    font-size: 70px;
+    color: var(--Titulocolor);
+    align-items: center;
+    padding-bottom: 40px;
+}
+.red_s a i:hover{
+    transform: scale(1.1);
+    transition: transform 0.35s;
+    color: var(--nav_hover);
+}
+.copy{
+    text-align: center;
+}
+
+@media screen and (max-width: 1150px ) {
+   
+    .T_I{
+        font-size: 60px;
+    }
+    .T_I1{
+        font-size: 40px;
+    }
+    .imagen_p>img{
+        width: 250px;
+        height: 250px;
+
+    }
+    .hover_p {
+        top: -250px
+    }
+}
+@media screen and (max-width: 1000px) {
+    .contenedor{
+        height: 500px;
+        padding: 50px;
+    }
+
+    /* header */
+
+    .Titulo_inicio{
+        margin-left: 50%;
+    }    
+    
+    .titulo{
+        font-size: 25px;
+    }
+
+    /* section somos y mision */
+
+    .texto_mision, .texto_somos{
+        font-size:18px ;
+    }
+}
+@media screen and (max-width:850px) {
+    .contenedor{
+        height: 500px;
+    }
+
+    /* Header */
+
+    .cabecera{
+        background-position: center;
+        background-position: top;
+    }
+    
+    .Titulo_inicio{
+        margin-left: 0;
+        padding: 30px;
+        justify-content: end;
+    }
+
+    /* section producto */
+
+    .imagen_p>img{
+        width: 200px;
+        height: 200px;
+    }
+    .hover_p {
+        top: -200px;
+    }
+    .hover_p p{
+        font-size: 25px;
+    }
+
+    /* section contacto */
+
+    .red_s a i{
+        font-size: 60px;
+    }
+
+}
+@media screen and (max-width:710px) {
+    .ilustracion{
+        display: flex;
+       justify-content: center;
+    }
+    .ilustracion > img{
+        width: 80%;
+        padding: 0;
+    }
+    .somos > img{
+        float: none;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .mision > img{
+        float: none;
+
+    }
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+    }
+    .producto{
+        height: 700px;
+    }
+    .imagen_p{
+        margin-bottom: 20px;
+
+    }
+    .imagen_p>img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        object-fit: cover;
+
+    }
+    .hover_p {
+        top: -270px;
+
+    }
+    .producto_ind{
+        height: 250px;
+    }
+    .Br, .Be, .An{
+        border-radius: 50%;
+    }
+    .boton i{
+        display: flex;
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:599px) {
+    .cabecera{
+        height: 600px;
+    }
+    .navegador{
+        height: 100vh;
+        flex-direction: column;
+        right: 100%;
+    }
+    .navegadores{
+        flex-direction: column;
+        line-height: 80px;
+        padding-bottom:20px ;
+    }
+    .nav{
+        border: 0;
+        font-size: 30px;
+
+    }
+    .boton i{
+        display: flex;
+        font-size: 20px;
+    }
+    .logo_inicio{
+        margin: 10px 0 0;
+        width: 90px;
+        height: 90px;
+    }
+
+
+    /* section producto */
+
+    .producto{
+        height: 950px;
+    }
+    .producto_ind{
+        margin-bottom: 20px;
+
+    }
+    .red_s a i{
+        font-size: 60px;
+        color: var(--Titulocolor);
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    
+}
